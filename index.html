@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Abazie Goodluck Chibuike — Bio</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&family=Be+Vietnam+Pro:wght@400&display=swap" rel="stylesheet"/>
+<style>
+:root {
+  color-scheme: light;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: 'Be Vietnam Pro', sans-serif;
+  background: radial-gradient(circle at top right, rgba(59,130,246,0.18), transparent 24%),
+              linear-gradient(180deg, #eef2ff 0%, #f8fafc 100%);
+  color: #0f172a;
+}
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+.glass-panel {
+  background: rgba(255,255,255,0.76);
+  backdrop-filter: blur(18px);
+  border: 1px solid rgba(148,163,184,0.16);
+}
+.card {
+  background: rgba(255,255,255,0.94);
+  border: 1px solid rgba(148,163,184,0.18);
+  box-shadow: 0 30px 70px rgba(15,23,42,0.08);
+}
+.button-primary {
+  background: #4338ca;
+  color: #ffffff;
+}
+.button-primary:hover {
+  background: #3730a3;
+}
+.button-secondary {
+  background: rgba(59,130,246,0.12);
+  color: #1d4ed8;
+}
+.button-secondary:hover {
+  background: rgba(59,130,246,0.18);
+}
+.subject-button {
+  border: 1px solid rgba(99,102,241,0.35);
+  background: #eef2ff;
+  color: #3730a3;
+  transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+}
+.subject-button.active {
+  background: linear-gradient(135deg, #4338ca 0%, #2563eb 100%);
+  color: #ffffff;
+  border-color: #4338ca;
+  box-shadow: 0 18px 32px rgba(67,56,202,0.18);
+  transform: translateY(-2px);
+}
+.subject-button:hover {
+  background: #ddd6fe;
+}
+.subject-info {
+  padding: 24px;
+  border-radius: 32px;
+  border: 1px solid rgba(99,102,241,0.18);
+  background: #ffffff;
+  color: #0f172a;
+  box-shadow: 0 24px 48px rgba(15,23,42,0.08);
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.subject-info.active {
+  display: block;
+  border-color: rgba(67,56,202,0.3);
+  transform: translateY(-1px);
+}
+.subject-info.hidden {
+  display: none;
+}
+.subject-info p {
+  margin-top: 1rem;
+  line-height: 1.8;
+}
+.blob {
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(40px);
+  opacity: 0.65;
+}
+.blob-1 {
+  width: 280px;
+  height: 280px;
+  background: rgba(59,130,246,0.24);
+  top: -60px;
+  right: -50px;
+}
+.blob-2 {
+  width: 180px;
+  height: 180px;
+  background: rgba(16,185,129,0.18);
+  bottom: 20px;
+  left: -40px;
+}
+.hero-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2.5rem;
+  align-items: center;
+}
+@media (max-width: 768px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+</head>
+<body id="top" class="min-h-screen">
+<nav class="glass-panel fixed inset-x-0 top-0 z-50 shadow-xl">
+  <div class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+    <a href="#top" class="text-2xl font-semibold tracking-tight text-slate-900">Chibuike</a>
+    <div class="hidden md:flex items-center gap-6 text-sm font-semibold text-slate-600">
+      <a href="#top" class="transition hover:text-slate-900">Home</a>
+      <a href="#about" class="transition hover:text-slate-900">About</a>
+      <a href="#skills" class="transition hover:text-slate-900">Skills</a>
+      <a href="#subjects" class="transition hover:text-slate-900">Subjects</a>
+    </div>
+    <a href="#about" class="button-primary inline-flex items-center gap-2 rounded-full px-5 py-3 text-sm font-semibold shadow-lg transition-transform duration-200 hover:-translate-y-0.5">About Me</a>
+  </div>
+</nav>
+<main class="relative pt-28">
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+  <section class="mx-auto max-w-6xl px-6 pb-16">
+    <div class="hero-grid">
+      <div class="space-y-6">
+        <p class="inline-flex items-center gap-2 rounded-full bg-indigo-100 px-4 py-2 text-sm font-semibold text-indigo-700 shadow-sm">Future programmer & web developer</p>
+        <h1 class="text-5xl font-extrabold tracking-tight text-slate-900 sm:text-6xl">Hi, I'm <span class="text-indigo-600">Abazie</span>!</h1>
+        <p class="max-w-2xl text-lg leading-8 text-slate-700">I am a student at Proda Preparatory and Secondary School in Umuahia, Abia State. I love exploring science, technology, and programming, and I am working toward becoming a professional programmer and web developer.</p>
+        <div class="flex flex-wrap gap-4">
+          <button onclick="magicalColorChange(event)" class="button-primary inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold shadow-lg transition hover:-translate-y-0.5"><span class="material-symbols-outlined">auto_awesome</span> Click for Magic!</button>
+          <a href="#skills" class="button-secondary inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold">See my skills</a>
+        </div>
+      </div>
+      <div class="relative">
+        <div class="card overflow-hidden rounded-[32px]">
+          <img class="h-full w-full object-cover" src="Photos/5793E00F-C9FF-4180-870C-BC8776DA151B.PNG" alt="Profile image" />
+        </div>
+        <div class="absolute -bottom-6 left-6 rounded-3xl border border-white bg-white/90 p-6 shadow-2xl">
+          <p class="text-sm font-semibold uppercase tracking-[0.24em] text-slate-500">Student spotlight</p>
+          <p class="mt-3 text-slate-700">Loves science experiments, coding projects, and building simple apps that help friends and family.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="about" class="mx-auto max-w-6xl px-6 pb-16">
+    <div class="card rounded-[32px] p-10">
+      <div class="flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between">
+        <div>
+          <h2 class="text-3xl font-bold text-slate-900">About Me</h2>
+          <p class="mt-4 max-w-2xl text-slate-700">I am passionate about learning and enjoy exploring new ideas, especially in science and technology. I am building my skills in programming and web development so I can create useful projects in the future.</p>
+        </div>
+        <div class="grid gap-3 sm:grid-cols-2">
+          <div class="rounded-3xl bg-indigo-50 p-6 shadow-sm">
+            <p class="text-sm font-semibold uppercase tracking-[0.24em] text-indigo-700">Favorite subjects</p>
+            <p class="mt-3 text-slate-700">Basic Science and Home Economics are my best subjects, where I enjoy discovering how things work and learning practical skills.</p>
+          </div>
+          <div class="rounded-3xl bg-emerald-50 p-6 shadow-sm">
+            <p class="text-sm font-semibold uppercase tracking-[0.24em] text-emerald-700">Family & food</p>
+            <p class="mt-3 text-slate-700">I enjoy simple meals like tea and bread, and spending time with my family and my brothers, including Chiemeries and Ifeanyi.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="skills" class="mx-auto max-w-6xl px-6 pb-16">
+    <div class="space-y-8">
+      <div class="flex items-center gap-4">
+        <div class="inline-flex h-12 w-12 items-center justify-center rounded-3xl bg-indigo-600 text-white shadow-lg"><span class="material-symbols-outlined">bolt</span></div>
+        <h2 class="text-3xl font-bold text-slate-900">My Superpowers</h2>
+      </div>
+      <div class="grid gap-6 md:grid-cols-3">
+        <div class="card rounded-[28px] p-8 text-center">
+          <div class="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-indigo-100 text-indigo-600"><span class="material-symbols-outlined text-3xl">science</span></div>
+          <h3 class="mt-6 text-xl font-semibold text-slate-900">Basic Science</h3>
+          <p class="mt-4 text-slate-600">I enjoy learning how the world works through experiments and facts.</p>
+        </div>
+        <div class="card rounded-[28px] p-8 text-center">
+          <div class="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-emerald-100 text-emerald-700"><span class="material-symbols-outlined text-3xl">kitchen</span></div>
+          <h3 class="mt-6 text-xl font-semibold text-slate-900">Home Economics</h3>
+          <p class="mt-4 text-slate-600">I am learning useful life skills like cooking, cleaning, and managing a home.</p>
+        </div>
+        <div class="card rounded-[28px] p-8 text-center">
+          <div class="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-cyan-100 text-cyan-700"><span class="material-symbols-outlined text-3xl">code</span></div>
+          <h3 class="mt-6 text-xl font-semibold text-slate-900">Programming</h3>
+          <p class="mt-4 text-slate-600">I am developing my skills to become a professional programmer.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="subjects" class="mx-auto max-w-6xl px-6 pb-24">
+    <div class="card rounded-[32px] p-10">
+      <div class="flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between">
+        <div class="space-y-3">
+          <div class="inline-flex items-center gap-3 rounded-full bg-slate-100 px-4 py-2 text-sm font-semibold text-slate-700"><span class="material-symbols-outlined">school</span>Subjects</div>
+          <h3 class="text-2xl font-bold text-slate-900">Choose a subject to learn more</h3>
+          <p class="text-slate-600">Tap the buttons below to switch between favorite topics and see how I enjoy studying them.</p>
+        </div>
+        <div class="flex flex-wrap gap-3">
+          <button class="subject-button rounded-full px-5 py-3 active" onclick="showSubjectInfo('science')">Basic Science</button>
+          <button class="subject-button rounded-full px-5 py-3" onclick="showSubjectInfo('home-economics')">Home Economics</button>
+        </div>
+      </div>
+      <div class="mt-8 space-y-4">
+        <div id="science" class="rounded-[28px] border border-indigo-100 bg-indigo-50 p-7 text-slate-700">
+          <p class="text-lg font-semibold text-indigo-700">Basic Science</p>
+          <p class="mt-3">The study of how the world works using experiments and facts. It teaches you about nature, plants, animals, the human body, and how technology uses science.</p>
+        </div>
+        <div id="home-economics" class="hidden rounded-[28px] border border-slate-200 bg-white p-7 text-slate-700">
+          <p class="text-lg font-semibold text-slate-900">Home Economics</p>
+          <p class="mt-3">The subject that teaches useful life skills like cooking, cleaning, budgeting, and taking care of a home. It helps you learn how to manage food, money, and family life.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="border-t border-slate-200 bg-slate-50">
+  <div class="mx-auto flex max-w-6xl flex-col gap-4 px-6 py-8 text-sm text-slate-600 sm:flex-row sm:items-center sm:justify-between">
+    <p>Built with curiosity by a future programmer and web developer.</p>
+    <div class="flex flex-wrap items-center gap-3">
+      <a href="#" class="rounded-full bg-white px-4 py-2 text-slate-700 shadow-sm transition hover:bg-slate-100">Github</a>
+      <a href="#" class="rounded-full bg-white px-4 py-2 text-slate-700 shadow-sm transition hover:bg-slate-100">Discord</a>
+      <a href="#" class="rounded-full bg-white px-4 py-2 text-slate-700 shadow-sm transition hover:bg-slate-100">CodePen</a>
+    </div>
+  </div>
+</footer>
+<script>
+const funGradients = [
+  ['bg-gradient-to-r','from-indigo-500/20','to-cyan-400/30'],
+  ['bg-gradient-to-br','from-emerald-400/20','to-indigo-500/30'],
+  ['bg-gradient-to-tl','from-rose-400/20','to-amber-400/25']
+];
+let currentGradientIndex = 0;
+const confettiColors = ['#4338ca','#22c55e','#0ea5e9','#f97316','#8b5cf6'];
+function magicalColorChange(event) {
+  const page = document.body;
+  page.classList.remove(...funGradients[currentGradientIndex]);
+  let newIndex;
+  do { newIndex = Math.floor(Math.random() * funGradients.length); } while (newIndex === currentGradientIndex);
+  currentGradientIndex = newIndex;
+  page.classList.add(...funGradients[currentGradientIndex]);
+  for (let i = 0; i < 40; i++) {
+    const confetti = document.createElement('div');
+    confetti.style.position = 'fixed';
+    confetti.style.width = '10px';
+    confetti.style.height = '10px';
+    confetti.style.backgroundColor = confettiColors[Math.floor(Math.random() * confettiColors.length)];
+    confetti.style.left = event.clientX + 'px';
+    confetti.style.top = event.clientY + 'px';
+    confetti.style.borderRadius = Math.random() > 0.5 ? '50%' : '24%';
+    confetti.style.opacity = '0.9';
+    confetti.style.zIndex = '50';
+    document.body.appendChild(confetti);
+    const angle = Math.random() * Math.PI * 2;
+    const speed = 5 + Math.random() * 12;
+    let x = event.clientX;
+    let y = event.clientY;
+    let vx = Math.cos(angle) * speed;
+    let vy = Math.sin(angle) * speed;
+    let frame = 0;
+    function animate() {
+      x += vx;
+      y += vy;
+      vy += 0.35;
+      confetti.style.left = x + 'px';
+      confetti.style.top = y + 'px';
+      confetti.style.opacity = Math.max(0, 0.9 - frame / 100);
+      frame += 1;
+      if (frame < 100) {
+        requestAnimationFrame(animate);
+      } else {
+        confetti.remove();
+      }
+    }
+    animate();
+  }
+}
+function showSubjectInfo(subjectId) {
+  document.querySelectorAll('.subject-button').forEach(button => {
+    const isActive = button.getAttribute('onclick').includes(subjectId);
+    button.classList.toggle('active', isActive);
+  });
+  document.querySelectorAll('#science, #home-economics').forEach(panel => {
+    panel.classList.toggle('hidden', panel.id !== subjectId);
+  });
+  document.querySelectorAll('.subject-info').forEach(panel => {
+    panel.classList.toggle('active', panel.id === subjectId);
+  });
+}
+</script>
+</body>
+</html>
