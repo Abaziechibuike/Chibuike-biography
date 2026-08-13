@@ -10,17 +10,58 @@
 <style>
 :root {
   color-scheme: light;
+  --page-bg-1: #eef2ff;
+  --page-bg-2: #f8fafc;
+  --page-glow-1: rgba(99, 102, 241, 0.28);
+  --page-glow-2: rgba(45, 212, 191, 0.18);
+  --page-glow-3: rgba(251, 146, 60, 0.16);
 }
 * {
   box-sizing: border-box;
 }
 body {
+  position: relative;
   margin: 0;
   min-height: 100vh;
   font-family: 'Be Vietnam Pro', sans-serif;
-  background: radial-gradient(circle at top right, rgba(59,130,246,0.18), transparent 24%),
-              linear-gradient(180deg, #eef2ff 0%, #f8fafc 100%);
+  background:
+    radial-gradient(circle at 18% 22%, var(--page-glow-1), transparent 21%),
+    radial-gradient(circle at 82% 12%, var(--page-glow-2), transparent 22%),
+    radial-gradient(circle at 52% 75%, var(--page-glow-3), transparent 26%),
+    linear-gradient(135deg, var(--page-bg-1) 0%, var(--page-bg-2) 58%, #f8fafc 100%);
+  background-attachment: fixed;
   color: #0f172a;
+  transition: background 0.9s ease;
+}
+body::before {
+  content: "";
+  position: fixed;
+  inset: -18% 8% auto auto;
+  width: 34rem;
+  height: 34rem;
+  border-radius: 9999px;
+  background: radial-gradient(circle, rgba(255,255,255,0.78), transparent 62%);
+  filter: blur(42px);
+  opacity: 0.72;
+  pointer-events: none;
+  z-index: 0;
+}
+body::after {
+  content: "";
+  position: fixed;
+  inset: auto auto -12% -8%;
+  width: 28rem;
+  height: 28rem;
+  border-radius: 9999px;
+  background: radial-gradient(circle, rgba(168, 85, 247, 0.18), transparent 62%);
+  filter: blur(36px);
+  opacity: 0.9;
+  pointer-events: none;
+  z-index: 0;
+}
+main, nav, footer {
+  position: relative;
+  z-index: 1;
 }
 .material-symbols-outlined {
   font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
@@ -44,7 +85,7 @@ body {
 }
 .button-secondary {
   background: rgba(59,130,246,0.12);
-  color: #1d4ed8;
+  color: #3d382e;
 }
 .button-secondary:hover {
   background: rgba(59,130,246,0.18);
@@ -63,7 +104,7 @@ body {
   transform: translateY(-2px);
 }
 .project-button:hover {
-  background: #ddd6fe;
+  background: #d151c9;
 }
 .project-info {
   padding: 24px;
@@ -102,8 +143,8 @@ body {
 .blob-2 {
   width: 180px;
   height: 180px;
-  background: rgba(16,185,129,0.18);
-  bottom: 20px;
+  background: rgba(94, 8, 87, 0.18);
+  bottom: 20.9px;
   left: -40px;
 }
 .hero-grid {
@@ -140,10 +181,10 @@ body {
       <div class="space-y-6">
         <p class="inline-flex items-center gap-2 rounded-full bg-indigo-100 px-4 py-2 text-sm font-semibold text-indigo-700 shadow-sm">Future programmer & web developer</p>
         <h1 class="text-5xl font-extrabold tracking-tight text-slate-900 sm:text-6xl">Hi, I'm <span class="text-indigo-600">Abazie</span>!</h1>
-        <p class="max-w-2xl text-lg leading-8 text-slate-700">I am a student at Proda Preparatory and Secondary School in Umuahia, Abia State. I love exploring science, technology, and programming, and I am working toward becoming a professional programmer and web developer.</p>
+        <p class="max-w-2xl text-lg leading-8 text-slate-700">I am a student at sologid technology hub in Umuahia, Abia State. I love exploring science, technology, and programming, and I am working toward becoming a professional programmer and web developer.</p>
         <div class="flex flex-wrap gap-4">
           <button onclick="magicalColorChange(event)" class="button-primary inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold shadow-lg transition hover:-translate-y-0.5"><span class="material-symbols-outlined">auto_awesome</span> Click for Magic!</button>
-          <a href="#skills" class="button-secondary inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold">See my skills</a>
+          <a href="#techniques" class="button-secondary inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold"> My Techniques</a>
         </div>
       </div>
       <div class="relative">
@@ -151,7 +192,7 @@ body {
           <img class="h-full w-full object-cover" src="Photos/5793E00F-C9FF-4180-870C-BC8776DA151B.PNG" alt="Profile image" />
         </div>
         <div class="absolute -bottom-6 left-6 rounded-3xl border border-white bg-white/90 p-6 shadow-2xl">
-          <p class="text-sm font-semibold uppercase tracking-[0.24em] text-slate-500">Student spotlight</p>
+          <p class="text-sm font-semibold uppercase tracking-[0.24em] text-slate-500">a programer in  spotlight</p>
           <p class="mt-3 text-slate-700">Loves science experiments, coding projects, and building simple apps that help friends and family.</p>
         </div>
       </div>
@@ -162,41 +203,41 @@ body {
       <div class="flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between">
         <div>
           <h2 class="text-3xl font-bold text-slate-900">About Me</h2>
-          <p class="mt-4 max-w-2xl text-slate-700">I am passionate about learning and enjoy exploring new ideas, especially in science and technology. I am building my skills in programming and web development so I can create useful projects in the future.</p>
+          <p class="mt-4 max-w-2xl text-slate-700">I am passionate about learning and enjoy exploring new ideas, especially in programing and technology. I am building my skills in programming and web development so I can create useful projects in the future.</p>
         </div>
         <div class="grid gap-3 sm:grid-cols-2">
           <div class="rounded-3xl bg-indigo-50 p-6 shadow-sm">
-            <p class="text-sm font-semibold uppercase tracking-[0.24em] text-indigo-700">Favorite projects</p>
-            <p class="mt-3 text-slate-700">Basic Science and Home Economics are my best project areas, where I enjoy discovering how things work and learning practical skills.</p>
+            <p class="text-sm font-semibold uppercase tracking-[0.24em] text-indigo-700">Favorite projects cards</p>
+            <p class="mt-3 text-slate-700">Designing and coding are my best project areas, where I enjoy discovering how things work and learning practical skills.</p>
           </div>
           <div class="rounded-3xl bg-emerald-50 p-6 shadow-sm">
-            <p class="text-sm font-semibold uppercase tracking-[0.24em] text-emerald-700">Family & food</p>
-            <p class="mt-3 text-slate-700">I enjoy simple meals like tea and bread, and spending time with my family and my brothers, including Chiemeries and Ifeanyi.</p>
+            <p class="text-sm font-semibold uppercase tracking-[0.24em] text-emerald-700">Favorite Meal Cards</p>
+            <p class="mt-3 text-slate-700">I enjoy simple, hearty meals that are easy to make and share with others like tea and bread./indomy</p>
           </div>
         </div>
       </div>
     </div>
   </section>
-  <section id="skills" class="mx-auto max-w-6xl px-6 pb-16">
+  <section id="techniques" class="mx-auto max-w-6xl px-6 pb-16">
     <div class="space-y-8">
       <div class="flex items-center gap-4">
         <div class="inline-flex h-12 w-12 items-center justify-center rounded-3xl bg-indigo-600 text-white shadow-lg"><span class="material-symbols-outlined">bolt</span></div>
-        <h2 class="text-3xl font-bold text-slate-900">My Superpowers</h2>
+        <h2 class="text-3xl font-bold text-slate-900">My Techniques>
       </div>
       <div class="grid gap-6 md:grid-cols-3">
         <div class="card rounded-[28px] p-8 text-center">
           <div class="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-indigo-100 text-indigo-600"><span class="material-symbols-outlined text-3xl">science</span></div>
-          <h3 class="mt-6 text-xl font-semibold text-slate-900">Basic Science</h3>
-          <p class="mt-4 text-slate-600">I enjoy learning how the world works through experiments and facts.</p>
+          <h3 class="mt-6 text-xl font-semibold text-slate-900">Web Creation/Building
+          <p class="mt-4 text-slate-600">I enjoy Webcreation/Building why i like them is because they help life easy a.</p>
         </div>
         <div class="card rounded-[28px] p-8 text-center">
-          <div class="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-emerald-100 text-emerald-700"><span class="material-symbols-outlined text-3xl">kitchen</span></div>
-          <h3 class="mt-6 text-xl font-semibold text-slate-900">Home Economics</h3>
-          <p class="mt-4 text-slate-600">I am learning useful life skills like cooking, cleaning, and managing a home.</p>
+          <div class="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-emerald-100 text-emerald-700"><span class="material-symbols-outlined text-3xl">coding</span></div>
+          <h3 class="mt-6 text-xl font-bold text-slate-900">Coding</h3>
+          <p class="mt-4 text-slate-600">I am learning useful  skills like coding, Desighning , .</p>
         </div>
         <div class="card rounded-[28px] p-8 text-center">
-          <div class="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-cyan-100 text-cyan-700"><span class="material-symbols-outlined text-3xl">code</span></div>
-          <h3 class="mt-6 text-xl font-semibold text-slate-900">Programming</h3>
+          <div class="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-cyan-100 text-cyan-700"><span class="material-symbols-outlined text-3xl">programming</span></div>
+          <h3 class="mt-6 text-xl font-bold text-slate-900">Programming</h3>
           <p class="mt-4 text-slate-600">I am developing my skills to become a professional programmer.</p>
         </div>
       </div>
@@ -231,21 +272,54 @@ body {
   </div>
 </footer>
 <script>
-const funGradients = [
-  ['bg-gradient-to-r','from-indigo-500/20','to-cyan-400/30'],
-  ['bg-gradient-to-br','from-emerald-400/20','to-indigo-500/30'],
-  ['bg-gradient-to-tl','from-rose-400/20','to-amber-400/25']
+const magicPalettes = [
+  {
+    bg1: '#eef2ff',
+    bg2: '#ecfeff',
+    glow1: 'rgba(99, 102, 241, 0.38)',
+    glow2: 'rgba(45, 212, 191, 0.24)',
+    glow3: 'rgba(59, 130, 246, 0.22)'
+  },
+  {
+    bg1: '#fdf2f8',
+    bg2: '#fef3c7',
+    glow1: 'rgba(236, 72, 153, 0.32)',
+    glow2: 'rgba(251, 146, 60, 0.18)',
+    glow3: 'rgba(168, 85, 247, 0.22)'
+  },
+  {
+    bg1: '#ecfdf5',
+    bg2: '#eff6ff',
+    glow1: 'rgba(16, 185, 129, 0.28)',
+    glow2: 'rgba(14, 165, 233, 0.24)',
+    glow3: 'rgba(34, 197, 94, 0.18)'
+  },
+  {
+    bg1: '#f5f3ff',
+    bg2: '#fef2f2',
+    glow1: 'rgba(139, 92, 246, 0.34)',
+    glow2: 'rgba(244, 114, 182, 0.22)',
+    glow3: 'rgba(234, 179, 8, 0.16)'
+  }
 ];
-let currentGradientIndex = 0;
-const confettiColors = ['#4338ca','#22c55e','#0ea5e9','#f97316','#8b5cf6'];
+const confettiColors = ['#4338ca','#22c55e','#0ea5e9','#f97316','#8b5cf6','#ec4899'];
 function magicalColorChange(event) {
-  const page = document.body;
-  page.classList.remove(...funGradients[currentGradientIndex]);
-  let newIndex;
-  do { newIndex = Math.floor(Math.random() * funGradients.length); } while (newIndex === currentGradientIndex);
-  currentGradientIndex = newIndex;
-  page.classList.add(...funGradients[currentGradientIndex]);
-  for (let i = 0; i < 40; i++) {
+  const palette = magicPalettes[Math.floor(Math.random() * magicPalettes.length)];
+  const root = document.documentElement;
+  root.style.setProperty('--page-bg-1', palette.bg1);
+  root.style.setProperty('--page-bg-2', palette.bg2);
+  root.style.setProperty('--page-glow-1', palette.glow1);
+  root.style.setProperty('--page-glow-2', palette.glow2);
+  root.style.setProperty('--page-glow-3', palette.glow3);
+  document.body.animate([
+    { filter: 'saturate(1) brightness(1)' },
+    { filter: 'saturate(1.2) brightness(1.06)' },
+    { filter: 'saturate(1) brightness(1)' }
+  ], {
+    duration: 900,
+    easing: 'ease-out'
+  });
+  for (let i = 0; i < 42; i++) {
     const confetti = document.createElement('div');
     confetti.style.position = 'fixed';
     confetti.style.width = '10px';
@@ -256,9 +330,10 @@ function magicalColorChange(event) {
     confetti.style.borderRadius = Math.random() > 0.5 ? '50%' : '24%';
     confetti.style.opacity = '0.9';
     confetti.style.zIndex = '50';
+    confetti.style.boxShadow = '0 0 18px rgba(255,255,255,0.28)';
     document.body.appendChild(confetti);
     const angle = Math.random() * Math.PI * 2;
-    const speed = 5 + Math.random() * 12;
+    const speed = 4 + Math.random() * 12;
     let x = event.clientX;
     let y = event.clientY;
     let vx = Math.cos(angle) * speed;
@@ -270,9 +345,10 @@ function magicalColorChange(event) {
       vy += 0.35;
       confetti.style.left = x + 'px';
       confetti.style.top = y + 'px';
-      confetti.style.opacity = Math.max(0, 0.9 - frame / 100);
+      confetti.style.opacity = Math.max(0, 0.9 - frame / 110);
+      confetti.style.transform = `scale(${1 - frame / 140})`;
       frame += 1;
-      if (frame < 100) {
+      if (frame < 110) {
         requestAnimationFrame(animate);
       } else {
         confetti.remove();
