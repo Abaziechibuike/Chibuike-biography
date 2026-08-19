@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chibuike coding school: Learn Website Building</title>
+  <style>
+    :root {
+      color-scheme: light;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f8fbff;
+      color: #0f172a;
+    }
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+    header {
+      background: linear-gradient(135deg, #2563eb, #8b5cf6);
+      color: white;
+      padding: 3rem 1.5rem;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: clamp(2.2rem, 4vw, 3.5rem);
+    }
+    header p {
+      margin: 1rem auto 0;
+      max-width: 640px;
+      font-size: 1.1rem;
+      opacity: 0.92;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      padding: 1rem;
+      background: #eef2ff;
+      border-bottom: 1px solid #dbeafe;
+    }
+    nav a {
+      color: #1d4ed8;
+      text-decoration: none;
+      font-weight: 700;
+      padding: 0.5rem 0.75rem;
+      border-radius: 999px;
+      transition: background 0.2s ease;
+    }
+    nav a:hover {
+      background: rgba(37,99,235,0.12);
+    }
+    main {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem 4rem;
+    }
+    .section-card {
+      background: white;
+      border: 1px solid #e2e8f0;
+      border-radius: 24px;
+      padding: 2rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 20px 40px rgba(15,23,42,0.05);
+    }
+    .section-card h2 {
+      margin-top: 0;
+      color: #1e293b;
+    }
+    .section-card p {
+      margin: 1rem 0;
+    }
+    .steps {
+      display: grid;
+      gap: 1rem;
+    }
+    .step {
+      background: #f8fafc;
+      border-radius: 18px;
+      border: 1px solid #e2e8f0;
+      padding: 1.25rem;
+    }
+    .step strong {
+      display: inline-block;
+      margin-bottom: 0.75rem;
+      color: #4338ca;
+    }
+    pre {
+      background: #0f172a;
+      color: #f8fafc;
+      padding: 1rem;
+      border-radius: 16px;
+      overflow-x: auto;
+      font-size: 0.95rem;
+      margin: 1rem 0;
+    }
+    code {
+      font-family: ui-monospace, SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace;
+    }
+    .highlight {
+      background: #eff6ff;
+      border-left: 4px solid #2563eb;
+      padding: 1rem 1rem 1rem 1rem;
+      border-radius: 16px;
+      margin: 1rem 0;
+    }
+    .example-box {
+      background: #ecfdf5;
+      border: 1px solid #d1fae5;
+      border-radius: 18px;
+      padding: 1rem;
+      margin: 1rem 0;
+    }
+    footer {
+      text-align: center;
+      color: #475569;
+      padding: 2rem 1.5rem 3rem;
+    }
+    .note {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: #eff6ff;
+      border: 1px solid #bfdbfe;
+      color: #1e3a8a;
+      padding: 0.8rem 1rem;
+      border-radius: 14px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Chibuike Coding School</h1>
+    <p>Learn how to build a website step by step with simple lessons made for beginners and kids.</p>
+  </header>
+  <nav>
+    <a href="#why-html">Why HTML?</a>
+    <a href="#page-structure">Page structure</a>
+    <a href="#style-with-css">Style with CSS</a>
+    <a href="#add-interaction">Add interaction</a>
+  </nav>
+  <main>
+    <section id="why-html" class="section-card">
+      <h2>Start with the basics: HTML</h2>
+      <p>Every website is made of HTML. HTML tells the browser what to show. It uses tags like <code>&lt;h1&gt;</code>, <code>&lt;p&gt;</code>, and <code>&lt;a&gt;</code>.</p>
+      <div class="steps">
+        <div class="step">
+          <strong>Step 1: Open a file</strong>
+          <p>Create a new file called <code>index.html</code>. This file will hold your first website.</p>
+        </div>
+        <div class="step">
+          <strong>Step 2: Add the page structure</strong>
+          <p>Write the basic HTML parts: doctype, html, head, and body.</p>
+          <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+  &lt;head&gt;
+    &lt;meta charset="UTF-8" /&gt;
+    &lt;title&gt;My First Website&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Hello, world!&lt;/h1&gt;
+    &lt;p&gt;This is my first website.&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+        </div>
+      </div>
+      <div class="highlight">
+        <p><strong>Tip:</strong> A browser reads HTML from top to bottom, and it shows the page where each tag tells it what to do.</p>
+      </div>
+    </section>
+    <section id="page-structure" class="section-card">
+      <h2>Understand the page structure</h2>
+      <p>The main parts of a page are:</p>
+      <ul>
+        <li><strong>&lt;html&gt;</strong> – the whole page</li>
+        <li><strong>&lt;head&gt;</strong> – hidden information, like the title</li>
+        <li><strong>&lt;body&gt;</strong> – what the visitor sees</li>
+      </ul>
+      <div class="example-box">
+        <p><strong>Example:</strong> The title appears in the browser tab, and the content appears on the page.</p>
+      </div>
+      <pre><code>&lt;head&gt;
+  &lt;title&gt;My Website&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Welcome!&lt;/h1&gt;
+&lt;/body&gt;</code></pre>
+    </section>
+    <section id="style-with-css" class="section-card">
+      <h2>Style your page with CSS</h2>
+      <p>CSS makes your page look nice. It changes colors, fonts, and spacing. You can add CSS inside the HTML file.</p>
+      <pre><code>&lt;style&gt;
+  body {
+    background: #eef2ff;
+    color: #1e293b;
+    font-family: Arial, sans-serif;
+  }
+  h1 {
+    color: #4338ca;
+  }
+  p {
+    max-width: 640px;
+  }
+&lt;/style&gt;</code></pre>
+      <p>Place this CSS inside the <code>&lt;head&gt;</code> section.</p>
+    </section>
+    <section id="add-interaction" class="section-card">
+      <h2>Add simple interaction with JavaScript</h2>
+      <p>JavaScript can make buttons do things. It can change text or show a message when someone clicks.</p>
+      <pre><code>&lt;button onclick="sayHello()"&gt;Click me&lt;/button&gt;
+
+&lt;script&gt;
+  function sayHello() {
+    alert('Hello from Chibuike School!');
+  }
+&lt;/script&gt;</code></pre>
+      <div class="highlight">
+        <p><strong>Step-by-step:</strong> first create the button, then make a function that runs when the button is clicked.</p>
+      </div>
+    </section>
+    <section class="section-card">
+      <h2>Build your first mini website</h2>
+      <p>Combine HTML, CSS, and JavaScript to make a small page.</p>
+      <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+  &lt;head&gt;
+    &lt;meta charset="UTF-8" /&gt;
+    &lt;title&gt;My Website&lt;/title&gt;
+    &lt;style&gt;
+      body { background: #f8fafc; font-family: Arial, sans-serif; padding: 2rem; }
+      .box { background: white; padding: 1.5rem; border: 1px solid #cbd5e1; border-radius: 16px; }
+      button { background: #4338ca; color: white; padding: 0.75rem 1.2rem; border: none; border-radius: 999px; }
+    &lt;/style&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div class="box"&gt;
+      &lt;h1&gt;Welcome to my site&lt;/h1&gt;
+      &lt;p&gt;I am learning how to build websites step by step.&lt;/p&gt;
+      &lt;button onclick="showMessage()"&gt;Say hello&lt;/button&gt;
+    &lt;/div&gt;
+    &lt;script&gt;
+      function showMessage() {
+        alert('Nice work! You built a website.');
+      }
+    &lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+    </section>
+    <section class="section-card">
+      <h2>What to do next</h2>
+      <ol>
+        <li>Change the words on the page to your own.</li>
+        <li>Try a new color for the background.</li>
+        <li>Add another button or a list of your favorite things.</li>
+      </ol>
+      <div class="note">
+        <span>💡</span>
+        <span>Every small change helps you learn more. Practice by editing the code and reloading the page in your browser.</span>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p>Made for beginners and kids who want to learn how to build a website. Have fun and keep learning!</p>
+  </footer>
+</body>
+</html>
